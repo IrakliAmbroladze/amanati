@@ -1,1 +1,1 @@
-export { Input } from "./Input";
+export { PriceCalculator } from "./PriceCalculator";
