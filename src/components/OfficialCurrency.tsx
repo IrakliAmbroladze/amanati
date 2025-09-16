@@ -6,8 +6,7 @@ export const OfficialCurrency = async ({
   rateEUR: number;
 }) => {
   return (
-    <div>
-      OfficialCurrency:
+    <div className="flex flex-col justify-center items-center gap-1">
       <div>
         {new Date(date).toLocaleDateString("ka-GE", {
           weekday: "long",
@@ -16,7 +15,7 @@ export const OfficialCurrency = async ({
           day: "numeric",
         })}
       </div>
-      <div>1 EUR = {rateEUR} GEL</div>
+      <div>1 ევრო = {rateEUR} ლარი</div>
     </div>
   );
 };

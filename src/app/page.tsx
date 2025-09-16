@@ -13,9 +13,8 @@ export default async function Home() {
   }
 
   const rateEUR = eurCurrency.rate;
-  console.log("page rateEUR : ", rateEUR);
   return (
-    <div className="flex items-center justify-center min-h-screen gap-16 sm:p-20">
+    <div className="flex flex-col items-center min-h-screen gap-10 pt-30">
       <OfficialCurrency date={date} rateEUR={rateEUR} />
       <PriceCalculator rateEUR={rateEUR} />
     </div>

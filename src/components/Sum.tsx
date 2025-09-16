@@ -9,10 +9,20 @@ export const Sum = ({
   transportCost: number;
   rateEUR: number;
 }) => {
-  const sum = rateEUR * (price + (transportCost * weight) / 1000);
+  const sum = Number(
+    (rateEUR * (price + (transportCost * weight) / 1000)).toFixed(2),
+  );
   return (
-    <div>
-      ჯამი <div>{sum}</div>
-    </div>
+    <>
+      <div>
+        <div>ჯამი</div>
+      </div>
+      <div>{sum === 0 ? "" : `${sum} ლარი`}</div>
+      <div>
+        {sum === 0
+          ? ""
+          : `დეტალურად: ${rateEUR} * (${price} + (${transportCost} * ${weight}) / 1000)`}
+      </div>
+    </>
   );
 };
